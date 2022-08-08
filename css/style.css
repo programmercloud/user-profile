@@ -113,7 +113,8 @@ body {
 .profile .content .btn:hover {
   box-shadow: 0 0 0 5px rgba(101, 153, 205, 0.5);
 }
-.profile .content .btn span {
+
+.btn span {
   width: 60%;
   height: 2px;
   position: absolute;
@@ -123,8 +124,9 @@ body {
   transform: translateY(-50%);
   animation: to-hamburger 0.3s forwards ease-in-out;
 }
-.profile .content .btn span::before,
-.profile .content .btn span::after {
+
+.btn span::before,
+.btn span::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -134,41 +136,46 @@ body {
   transform: rotate(0deg);
   right: 0;
 }
-.profile .content .btn span::before {
+
+.btn span::before {
   margin-top: -7px;
 }
-.profile .content .btn span::after {
+
+.btn span::after {
   margin-top: 7px;
 }
-.profile .content .btn.active span {
-  animation: to-arrow 0.3s forwards ease-in-out;
+
+.btn.active {
+  background-color: #f1f1f1;
 }
-.profile .content .btn.active span::before,
-.profile .content .btn.active span::after {
+
+.btn.active span {
+  animation: to-arrow 0.3s forwards ease-in-out;
+   background-color: #232323;
+}
+
+.btn.active span::before,
+.btn.active span::after {
   width: 60%;
   right: -1px;
 }
-.profile .content .btn.active span::before {
+
+.btn.active span::before {
   transform: rotate(45deg);
   background-color: #232323;
 }
-.profile .content .btn.active span::after {
+
+.btn.active span::after {
   transform: rotate(-45deg);
   background-color: #232323;
 }
 
-.profile .content .btn.active span {
-  background-color: #232323;
-}
-
-.profile .content .btn.active {
-  background-color: #f1f1f1;
-}
 @keyframes to-hamburger {
   from {
     transform: translateY(-50%) rotate(-180deg);
   }
 }
+
 @keyframes to-arrow {
   from {
     transform: translateY(-50%) rotate(0deg);
@@ -177,7 +184,8 @@ body {
     transform: translateY(-50%) rotate(180deg);
   }
 }
-.profile .box {
+
+.box {
   width: 150px;
   height: 150px;
   opacity: 0;
@@ -189,7 +197,8 @@ body {
   transform: translate(-50%, -50%);
   transition-duration: 0.3s;
 }
-.profile .box i {
+
+.box i {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -203,33 +212,41 @@ body {
   box-shadow: 0 0 0.5rem #babbbc;
   transition-duration: 0.3s;
 }
-.profile .box i:hover {
+
+.box i:hover {
   transition-delay: initial !important;
   box-shadow: 0 0 0 5px #babbbc;
 }
-.profile .box.open {
+
+.box.open {
   opacity: 1;
 }
-.profile .box.open i {
+
+.box.open i {
   left: 60px;
 }
-.profile .box.open i:nth-of-type(1) {
+
+.box.open i:nth-of-type(1) {
   transform: rotate(-90deg) translateX(120px) rotate(90deg);
   transition-delay: 0s;
 }
-.profile .box.open i:nth-of-type(2) {
+
+.box.open i:nth-of-type(2) {
   transform: rotate(-45deg) translateX(120px) rotate(45deg);
   transition-delay: 0.1s;
 }
-.profile .box.open i:nth-of-type(3) {
+
+.box.open i:nth-of-type(3) {
   transform: rotate(0deg) translateX(120px) rotate(0deg);
   transition-delay: 0.2s;
 }
-.profile .box.open i:nth-of-type(4) {
+
+.box.open i:nth-of-type(4) {
   transform: rotate(45deg) translateX(120px) rotate(-45deg);
   transition-delay: 0.3s;
 }
-.profile .box.open i:nth-of-type(5) {
+
+.box.open i:nth-of-type(5) {
   transform: rotate(90deg) translateX(120px) rotate(-90deg);
   transition-delay: 0.4s;
 }
